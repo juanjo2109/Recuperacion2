@@ -3,28 +3,27 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="298.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox cacheShape="false" centerShape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
             <VBox pickOnBounds="false" prefHeight="99.0" prefWidth="145.0" style="-fx-border-color: blue;" />
             <VBox prefHeight="99.0" prefWidth="136.0" style="-fx-border-color: orange;" />
-            <VBox prefHeight="99.0" prefWidth="118.0" style="-fx-border-color: blue;" />
+            <VBox prefHeight="99.0" prefWidth="125.0" style="-fx-border-color: blue;" />
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
             <VBox prefHeight="100.0" prefWidth="145.0" style="-fx-border-color: blue;" />
             <VBox prefHeight="100.0" prefWidth="136.0" style="-fx-border-color: orange;" />
-            <VBox prefHeight="99.0" prefWidth="117.0" style="-fx-border-color: blue;" />
+            <VBox prefHeight="99.0" prefWidth="125.0" style="-fx-border-color: blue;" />
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
             <VBox prefHeight="100.0" prefWidth="145.0" style="-fx-border-color: blue;" />
             <VBox prefHeight="100.0" prefWidth="138.0" style="-fx-border-color: orange;" />
-            <VBox prefHeight="100.0" prefWidth="115.0" style="-fx-border-color: blue;" />
+            <VBox prefHeight="100.0" prefWidth="124.0" style="-fx-border-color: blue;" />
          </children>
       </HBox>
    </children>
