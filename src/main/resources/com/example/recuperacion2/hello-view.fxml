@@ -12,7 +12,7 @@
             <VBox prefHeight="99.0" prefWidth="125.0" style="-fx-border-color: blue;" />
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" >
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
             <VBox prefHeight="100.0" prefWidth="145.0" style="-fx-border-color: blue;" />
             <VBox prefHeight="100.0" prefWidth="136.0" style="-fx-border-color: orange;" />
