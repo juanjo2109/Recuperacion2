@@ -61,7 +61,7 @@ public class HelloController {
         btn8.setText("O");
     }
     public void botonclick8(ActionEvent actionEvent) {
-        btn9.setStyle("-fx-background-color: #ff0000;");
+        btn9.setStyle("-fx-background-color: #00eaff;");
         btn9.setText("X");
     }
 }
