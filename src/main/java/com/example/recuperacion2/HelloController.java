@@ -6,13 +6,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class HelloController {
     @FXML
     private Button btn1;
     @FXML
     private Button btn2;
     @FXML
-    private Button brn3;
+    private Button btn3;
     @FXML
     private Button btn6;
     @FXML
@@ -25,43 +28,64 @@ public class HelloController {
     private Button btn9;
     @FXML
     private Button btn8;
+    @FXML
+    private Label etiqueta=new Label("Turno del Jugador X");
+    boolean turnoX=true;
+    int turnos=0;
 
+    int[][] tablero = {{0,0,0},{0,0,0},{0,0,0}};
 
     @FXML
     public void botonclick(ActionEvent actionEvent) {
-        btn1.setStyle("-fx-background-color: #ff0000;");
-        btn1.setText("X");
+        handleClickRaton(btn1,0,0);
     }
     public void botonclick1(ActionEvent actionEvent) {
-        btn2.setStyle("-fx-background-color: #0080ff;");
-        btn2.setText("X");
+        handleClickRaton(btn2,0,1);
     }
     public void botonclick2(ActionEvent actionEvent) {
-        brn3.setStyle("-fx-background-color: #00ffc4;");
-        brn3.setText("0");
+        handleClickRaton(btn3, 0,2);
     }
     public void botonclick3(ActionEvent actionEvent) {
-        btn4.setStyle("-fx-background-color: #ff6a00;");
-        btn4.setText("X");
+        handleClickRaton(btn4,1,0);
     }
     public void botonclick4(ActionEvent actionEvent) {
-        btn5.setStyle("-fx-background-color: #ff00b7;");
-        btn5.setText("O");
+        handleClickRaton(btn5,1,1);
     }
     public void botonclick5(ActionEvent actionEvent) {
-        btn6.setStyle("-fx-background-color: #ff006a;");
-        btn6.setText("X");
+        handleClickRaton(btn6,1,2);
     }
     public void botonclick6(ActionEvent actionEvent) {
-        btn7.setStyle("-fx-background-color: #ffea00;");
-        btn7.setText("O");
+        handleClickRaton(btn7,2,0);
     }
     public void botonclick7(ActionEvent actionEvent) {
-        btn8.setStyle("-fx-background-color: #ffd500;");
-        btn8.setText("O");
+        handleClickRaton(btn8,2,1);
     }
     public void botonclick8(ActionEvent actionEvent) {
-        btn9.setStyle("-fx-background-color: #00eaff;");
-        btn9.setText("X");
+        handleClickRaton(btn9,2,2);
     }
+
+    private void handleClickRaton(Button btn, int X, int Y){
+        if (turnoX){
+            btn.setStyle("-fx-background-color: #ff0000;");
+            btn.setText("X");
+            turnoX=!turnoX;
+            etiqueta.setText("Turno Jugador O");
+            int i = X;
+            int j = Y;
+
+        }else{
+            btn.setStyle("-fx-background-color: #0080ff;");
+            btn.setText("O");
+            turnoX=!turnoX;
+            etiqueta.setText("Turno Jugador X");
+        };
+        turnos=turnos++;
+        if (turnos>=9){
+            //fin partida
+            etiqueta.setText("Fin de Partida");
+        }
+
+    }
+
+
 }
