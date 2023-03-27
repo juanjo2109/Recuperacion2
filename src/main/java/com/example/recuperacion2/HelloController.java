@@ -72,20 +72,28 @@ public class HelloController {
             etiqueta.setText("Turno Jugador O");
             int i = X;
             int j = Y;
+           btn.setDisable(true);
 
         }else{
             btn.setStyle("-fx-background-color: #0080ff;");
             btn.setText("O");
             turnoX=!turnoX;
             etiqueta.setText("Turno Jugador X");
+            btn.setDisable(true);
         };
-        turnos=turnos++;
+        turnos=++turnos;
         if (turnos>=9){
-            //fin partida
-            etiqueta.setText("Fin de Partida");
+
+                //fin partida
+                etiqueta.setText("Fin de Partida");
+
         }
 
     }
+    private void comprobacion(){
+    tablero.toString()
+    }
+
 
 
 }
