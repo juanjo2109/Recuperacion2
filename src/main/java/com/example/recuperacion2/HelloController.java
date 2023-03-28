@@ -4,10 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.shape.Rectangle;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 public class HelloController {
     @FXML
@@ -64,7 +60,7 @@ public class HelloController {
         handleClickRaton(btn9,2,2);
     }
 
-    private void handleClickRaton(Button btn, int X, int Y){
+    private int handleClickRaton(Button btn, int X, int Y){
         if (turnoX){
             btn.setStyle("-fx-background-color: #ff0000;");
             btn.setText("X");
@@ -72,6 +68,22 @@ public class HelloController {
             etiqueta.setText("Turno Jugador O");
             int i = X;
             int j = Y;
+            int[] turno={X,Y};
+            int inicial = 0;
+            for (int n = 0; n < 3; n++) {
+                inicial = tablero[n][0];
+                boolean iguales = true;
+                for (int x = 1; x < 3; x++) {
+                    if (inicial != tablero[n][x]) {
+                        iguales = false;
+                    }
+                    if (iguales) {
+                        return inicial;
+                    }
+                }
+
+            }
+
            btn.setDisable(true);
 
         }else{
@@ -89,9 +101,25 @@ public class HelloController {
 
         }
 
+        return X;
     }
-    private void comprobacion(){
-    tablero.toString();
+    private int comprobacion() {
+
+        var inicial = 0;
+        for (int n = 0; n < 3; n++) {
+            inicial = tablero[n][0];
+            boolean iguales = true;
+            for (int x = 1; x < 3; x++) {
+                if (inicial != tablero[n][x]) {
+                    iguales = false;
+                }
+                if (iguales) {
+                    return inicial;
+                }
+            }
+
+        }
+        return 0;
     }
 
 
