@@ -1,4 +1,4 @@
-pacpackage com.example.recuperacion2;
+package com.example.recuperacion2;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
